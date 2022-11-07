@@ -1,0 +1,35 @@
+<!--pages/hot/hot.wxml-->
+<view class="top-title">
+  <text class="main-title">热门推荐</text>
+  <text></text>
+</view>
+<swiper circular="true" previous-margin="30rpx" duration="300" next-margin="30rpx">
+  <swiper-item wx:for="{{recommendCategories}}" wx:key="id">
+    <view class="swiper-item" bindtap="goArticleList" data-id="{{item.id}}">
+       <navigator url="/pages/list/list?subcateid={{item._id}}">
+      <image src="{{item.img}}" mode='aspectFill' class="slide-image" />
+      <view class="article-info">
+        <text class="title">{{item.name}}</text>
+        <text class="discription">{{item.city}}</text>
+      </view>
+    </navigator>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="classify" wx:for="{{categoryList}}" wx:for-item="bigCategory" wx:key="_id">
+  <view class="classify-title">{{ bigCategory.name }}
+    <navigator class="view-all" url='/pages/subcate/subcate?cateid={{bigCategory._id}}'>查看全部</navigator>
+  </view>
+  <view class="subContent">
+      <block wx:for="{{bigCategory.allData}}" wx:for-item="swiperItem" wx:key="index">
+        <navigator hover-class="none" class="article-item" url='/pages/list/list?subcateid={{swiperItem._id}}'>
+          <image class="article-clover" src='{{swiperItem.smallPic}}'></image>
+          <view class="article-info">
+            <text class="article-title">{{swiperItem.name}}</text>
+            <text class="article-description">{{swiperItem.description}}</text>
+            <view class="article-view">{{swiperItem.city}}</view>
+          </view>
+        </navigator>
+      </block>
+  </view>
+</view>

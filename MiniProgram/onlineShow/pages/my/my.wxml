@@ -1,0 +1,50 @@
+<view>
+  <image class="center_bg" mode='aspectFill' src='/assets/images/my_bg.jpg'></image>
+  <view class="avatar-warp" wx:if="{{!userInfo}}">
+    <image class="avatar" mode='aspectFill' src='/assets/test/2.jpg'></image>
+    <view class="nickname">新用户</view>
+    <view class="user-info">
+      <image src='../../assets/icons/level.png'></image>影坛新手</view>
+    <view class="article-info">
+      <view class="article-item">
+        <text class="num">0</text>预约</view>
+      <view class="article-item">
+        <text class="num">0</text>收藏</view>
+      <view class="article-item">
+        <text class="num">0</text>历史记录</view>
+      <!-- <navigator hover-class='none' url='../credits/credits' class="article-item"><text class="num">{{views}}</text>浏览</navigator> -->
+    </view>
+  </view>
+  <view class="avatar-warp" wx:else>
+    <image class="avatar" mode='aspectFill' src='{{userInfo.avatarUrl}}'></image>
+    <view class="nickname">{{userInfo.nickName}}</view>
+    <view class="user-info">
+      <image src='../../assets/icons/level.png'></image>影坛新手</view>
+    <view class="article-info">
+      <view class="article-item" bindtap="goOrder">
+        <text class="num">{{orderNum}}</text>预约</view>
+      <view class="article-item" bindtap="goFav">
+        <text class="num">{{favNum}}</text>收藏</view>
+      <view class="article-item" bindtap="goHistory">
+        <text class="num">{{historyNum}}</text>历史记录</view>
+      <!-- <navigator hover-class='none' url='../credits/credits' class="article-item"><text class="num">{{views}}</text>浏览</navigator> -->
+    </view>
+  </view>
+  <view class="menu-warp">
+    <navigator url='/pages/my/aboutMe/aboutMe'>
+      <image class="icon" src='../../assets/icons/developer.png'></image>
+      关于App
+      <image class="next" src='../../assets/icons/next.png'></image>
+    </navigator>
+  </view>
+  <view class="menu-warp">
+    <navigator url='/pages/my/aboutApp/aboutApp'>
+      <image class="icon" src='../../assets/icons/about.png'></image>
+      设置
+      <image class="next" src='../../assets/icons/next.png'></image>
+    </navigator>
+  </view>
+ 
+  <button  wx:if="{{!userInfo}}"  bindtap="getUserProfile"  style='width:80%;margin-bottom:20px; background-color:#fc0'>登录</button>
+  <button  wx:else  style='width:80%;margin-bottom:20px; background-color:#fc0' bindtap="logout">退出登录</button>
+</view>

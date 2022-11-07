@@ -1,0 +1,20 @@
+<!--pages/my/aboutApp/aboutApp.wxml-->
+<view class="set-wrap">
+		<!-- logo -->
+		<view class="logo-box u-flex-col u-row-center u-col-center">
+			<image class="logo-img" src="/assets/images/onlineShow.png" mode="aspectFit"></image>
+			
+		</view>
+		<view class="set-box">
+      <van-cell-group>
+      <van-cell title="占用缓存" value="{{currentSize}}kb" />
+      <van-cell title="当前版本" value="1.0" />
+      <van-cell title="联系我们" value="16622306336"  bind:click="callMe" />
+      <van-cell title="隐私协议"  />
+      </van-cell-group>
+		</view>
+		<view class="copyright-box" >
+			<view class="copyright-text">onlineShow版权所有</view>
+			<view class="copyright-text">Copyright 2022-2023</view>
+		</view>
+	</view>

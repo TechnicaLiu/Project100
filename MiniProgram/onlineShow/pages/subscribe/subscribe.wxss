@@ -1,0 +1,33 @@
+/* pages/subscribe/subscribe.wxss */
+.header{
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+.header image{
+    width: 100%;
+    height: 100%;
+}
+.openDate{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 10px;
+  color: #424242;
+}
+.submitBtn{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #424242;
+  text-align: center;
+
+}
+.submitBtn text{
+  display: block;
+  line-height: 40px;
+  font-size: 14px;
+  color: white;
+}

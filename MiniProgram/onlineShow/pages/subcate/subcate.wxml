@@ -1,0 +1,15 @@
+<!--pages/subcate/subcate.wxml-->
+<view class="main-title">分类如下</view>
+<view class="subContent clearfix" >
+  <view class="block" wx:for="{{subCateData}}" wx:for-item="subCateItem" wx:key="index">
+        <navigator hover-class="none" class="article-item" url='/pages/list/list?subcateid={{subCateItem._id}}'>
+          <image class="article-clover" src='{{subCateItem.smallPic}}'></image>
+          <view class="article-info">
+            <text class="article-title">{{subCateItem.name}}</text>
+            <text class="article-description">{{subCateItem.description}}</text>
+            <view class="article-view">{{subCateItem.city}}</view>
+          </view>
+        </navigator>
+  </view>
+</view>
+<van-divider contentPosition="center">没有更多内容</van-divider>

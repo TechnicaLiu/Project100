@@ -1,0 +1,18 @@
+<view  class="orderDetails" wx:for="{{orderList}}" wx:key="_id" >
+    <view class="orderListTitle">
+          <text class="userName">预约姓名：{{item.username}}</text>
+          <text class="orderStatus" data-id='{{item._id}}' bindtap="cancelOrder">取消预约</text>
+        </view>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{item.allData[0].img}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <text class="productname">展馆名称：{{item.allData[0].name}}</text>
+            <view class="productDate">预定时间: {{item.orderDate}}</view>     
+          </view>
+        </view>     
+</view>
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+

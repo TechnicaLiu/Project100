@@ -1,0 +1,10 @@
+/* pages/museum/map/map.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+}
+.myMap{
+  height: 500px;
+  width: 500px;
+}

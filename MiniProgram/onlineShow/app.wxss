@@ -1,0 +1,11 @@
+/**app.wxss**/
+view, text, input, textarea, button, navigator, swiper-item {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+navigator:hover {
+  background: none;
+}
+

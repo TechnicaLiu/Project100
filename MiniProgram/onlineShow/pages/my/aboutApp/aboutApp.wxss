@@ -1,0 +1,21 @@
+.set-wrap{
+  background-color: #f3f3f3;
+  height: 100vh;
+}
+.app-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 50px;
+}
+.copyright-box {
+  margin-top: 30px;
+  text-align: center;
+  
+}
+
+.copyright-text {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #c4c4c4;
+}

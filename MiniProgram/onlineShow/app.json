@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/aboutMe/aboutMe",
+    
+    "pages/location/location", 
+    "pages/subscribe/subscribe",
+    "pages/my/history/history",
+    "pages/my/aboutApp/aboutApp",
+    
+    "pages/museum/museum",
+    "pages/museum/map/map",
+    "pages/classify/classify",
+    "pages/article/article",
+    "pages/my/my",
+    "pages/my/favorite/favorite",
+    "pages/my/order/order",
+    "pages/subcate/subcate",
+    "pages/list/list"
+   
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于定位展览馆地址" 
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Show看展",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#5756c0",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/icons/首页-前.png",
+        "selectedIconPath": "/assets/icons/首页-后.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/assets/icons/分类-前.png",
+        "selectedIconPath": "/assets/icons/分类-后.png"
+      },
+      {
+        "pagePath": "pages/location/location",
+        "text": "展馆",
+        "iconPath": "/assets/icons/展览-前.png",
+        "selectedIconPath": "/assets/icons/展览-后.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/icons/我的-前.png",
+        "selectedIconPath": "/assets/icons/我的-后.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab/index",
+  "van-tabs": "@vant/weapp/tabs/index",
+  "van-tag": "@vant/weapp/tag/index",
+  "van-dialog": "@vant/weapp/dialog/index",
+  "van-empty": "@vant/weapp/empty/index",
+  "van-field": "@vant/weapp/field/index",
+  "van-toast": "@vant/weapp/toast/index",
+  "van-calendar": "@vant/weapp/calendar/index",
+  "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-submit-bar": "@vant/weapp/submit-bar/index",
+  "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+  "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+  "van-collapse": "@vant/weapp/collapse/index",
+  "van-collapse-item": "@vant/weapp/collapse-item/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

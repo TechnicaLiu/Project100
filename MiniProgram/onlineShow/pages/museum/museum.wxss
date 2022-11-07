@@ -1,0 +1,110 @@
+/* pages/museum/museum.wxss */
+
+.header {
+  height: 400rpx;
+  width: 100%;
+}
+.header image {
+  height: 100%;
+  width: 100%;
+}
+.content{
+  width: 100%;
+  padding: 20rpx;
+}
+.title{
+  font-size: 17px;
+  color: black;
+  font-weight: 500;
+}
+.second-header{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  line-height: 20px;
+
+}
+.second-header text{
+  display: inline-block;
+  width: 60%;
+  margin-right: 10px;
+  font-size: 12px;
+  color: #888888; 
+}
+.heart{
+  display: flex;
+  width: 30%;
+}
+.heart text{
+  margin-left: 10px;
+}
+.tags{
+  margin-top: 25px;
+}
+.tags view{
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+.tag_value{
+  margin-left: 10px;
+}
+.location{
+  color: red;
+}
+.info > text{
+  display: inline-block;
+  color: #626262;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.info .rich-text{
+  color: #626262;
+  font-size: 16px;
+}
+.other{
+  margin-top: 10px;
+  margin-bottom: 47px;
+}
+.other>text{
+  font-size: 15px;
+
+}
+.item{
+  
+  overflow: hidden;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  height:170px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+  
+}
+.item image{
+  width: 100%;
+  height: 110px;
+}
+.item .title{
+  font-size: 15px;
+  display: block;
+
+}
+.item .keywords{
+  margin-top: 10rpx;
+  font-size: 12px;
+  
+  color: #626262;
+}
+.item text{
+  display: block;
+  margin-left: 10rpx;
+}
+.bottom_btn{
+  position: fixed;
+  bottom: 15px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  padding: 0 15px 0 15px;
+}

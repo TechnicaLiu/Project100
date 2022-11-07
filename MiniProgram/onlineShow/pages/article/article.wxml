@@ -1,0 +1,50 @@
+<view class="article-cover">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" data-img="{{item}}" bindtap="previewImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="author-date">
+  <image class="avatar" src="{{articleDetail.authorImg}}"></image>
+  <text class="author">{{articleDetail.authorName}}</text>
+  <text class="static">发表于</text>
+  <text class="date">刚刚</text>
+</view>
+<text class="title">{{articleDetail.title}}</text>
+<view class="icon-wrapper">
+  <image wx:if="{{collected}}" class="icon" src="/assets/images/collection.png" bind:tap="onCollected"></image>
+  <image wx:else class="icon" src="/assets/images/collection-anti.png" bind:tap="onCollected"></image>
+  <image class="icon" src="/assets/images/share.png" bindtap="onShare"></image>
+</view>
+<view class="tags">
+  <text>作者：{{articleDetail.tags.name}}</text>
+  <text>年份：{{articleDetail.tags.year}}</text>
+  <text>地址：{{articleDetail.tags.location}}</text>
+  <text>特征：{{articleDetail.tags.apperance}}</text>
+
+
+</view>
+<text class="detail">摘要:{{articleDetail.shortInfo}}</text>
+<view class="museumName moreinfo">详细介绍 </view>
+
+
+<rich-text class="detail">{{articleDetail.Info}}</rich-text>
+
+
+
+<view class="museum">
+  <view class="museumName">所属展馆 </view>
+  <navigator url="/pages/museum/museum?id={{articleDetail.museumid}}">
+  <view class="museumBox">
+    <van-card  desc="{{museumDetail.shortInfo}}" title="{{museumDetail.name}}" thumb="{{ museumDetail.img }}" >
+    
+
+    </van-card>
+
+  </view>
+  </navigator>
+
+</view>

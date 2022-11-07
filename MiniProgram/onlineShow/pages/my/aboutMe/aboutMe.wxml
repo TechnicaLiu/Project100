@@ -1,0 +1,36 @@
+<view class="page">
+    <view class="top">
+      <view class="background"></view>
+    </view>
+    <view class="user-card">
+      <view class="card">
+        <view class="bottom">
+          <view class="left">
+            <view class="user-text">
+              <text>onlineShow</text>
+            </view>
+            <view class="user-phone"> 线上看展App </view>
+          </view>
+          <view class="right flex-center">
+            <u-icon class="icon" name="arrow-right"></u-icon>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="infoCard"> 
+      <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="介绍" name="1">
+    这是一款能够摆脱展览时间、地点或者各种形式要求的束缚，让观展者随时随地看到最新最全的展览资讯的小程序。
+  </van-collapse-item>
+  <van-collapse-item title="功能" name="2">
+    国内国外同时观展、线上展览浏览、收藏、预约、了解线下展览信息详情等...
+  </van-collapse-item>
+  <van-collapse-item title="特色" name="3">
+    线下展览在线预约功能、位置定位功能。
+  </van-collapse-item>
+</van-collapse>
+    </view>
+   
+    
+  </view>
+

@@ -1,0 +1,58 @@
+<view class="header">
+  <image src="{{museumInfo.img}}"></image>
+</view>
+<view class="content">
+<text class="title">{{museumInfo.name}}</text>
+<view class="second-header">
+  <text >{{museumInfo.shortInfo}}</text>
+  <view class="heart" wx:if="{{!isFavorite}}" bindtap="favoriteChange">
+    <van-icon name="like-o" />
+    <text clas>未收藏</text>
+  </view>
+  <view class="heart" wx:else bindtap="favoriteChange"  >
+    <van-icon name="like" color="red"   />
+    <text clas>已收藏</text>
+  </view>
+</view>
+
+<view class="tags">
+    <view>
+      <van-icon name="coupon-o" />
+    <text class="tag_value">{{museumInfo.openDate}}</text>
+    </view>
+    <view>
+    <van-icon name="clock-o" />
+    <text class="tag_value">{{museumInfo.opentime}}</text>
+    </view>
+    <view>
+      <van-icon name="bill-o" />
+    <text class="tag_value">{{museumInfo.price}}元/人</text>
+    </view>
+    <view bindtap="toMap" data-location="{{museumInfo.location}}">
+    <van-icon name="location-o" />
+    <text class="tag_value location">{{museumInfo.location}} </text><van-icon name="arrow" color="red"  />
+    </view>
+  </view>
+
+ <view class="info">
+    <text>展览地址：{{museumInfo.location}}</text>
+    <rich-text class="rich-text">{{museumInfo.Content}}</rich-text>
+ </view>
+
+<view class="other">
+  <text>馆内精选</text>
+  <view class="other_box">
+    <view class="item" wx:for="{{otherArticle}}" wx:key="id"> 
+      <navigator url="/pages/article/article?id={{item._id}}">
+        <image src="{{item.pic}}" alt=""/>
+      <text class="title">{{item.title}}</text>
+      <text class="keywords">{{item.keywords}}</text>
+      </navigator>
+    </view>
+  
+  </view>
+</view>
+</view>
+<view class="bottom_btn">
+  <van-button  size="normal"  icon="clock-o"  round type="info" color="#242424" type="primary" bind:click='goSubscribe'  >立即预约</van-button>
+</view>

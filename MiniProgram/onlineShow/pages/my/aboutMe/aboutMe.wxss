@@ -1,0 +1,95 @@
+page{
+  background-color: #f5f5f5;
+}
+
+.top {
+  height: 250rpx;
+  position: relative;
+  
+}
+.top  .background {
+  background-color: #5199ff;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  position: absolute;
+  height: 160rpx;
+  width: 100%;
+}
+.icon {
+  color: #96a1ae;
+  font-size: 40rpx;
+}
+.user-card {
+  height: 160rpx;
+  padding: 0 15px;
+ 
+}
+.user-card .card {
+  position: relative;
+  bottom: 72px;
+  height: 250rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px; 
+  display: flex;
+  align-items: center;
+  
+}
+
+.card .userImage {
+  position: absolute;
+  bottom: 24%;
+  left: 10%;
+  width: 150rpx;
+  height: 150rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.logo-img{
+  width: 100%;
+  height: 100%;
+}
+
+.card .bottom {
+  display: flex;
+  height: 70%;
+}
+
+.card .bottom .right {
+  width: 20%;
+  height: 50%;
+}
+
+.left {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+
+.left .user-text {
+  width: 100%;
+  font-size: 1.6em;
+  padding-left: 80rpx;
+  height: 50%;
+}
+
+.left .user-phone {
+  color: #96a1ae;
+  padding-left: 80rpx;
+  height: 50%;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.infoCard{
+  width: 90%;
+  height: 250rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+
+
+
+

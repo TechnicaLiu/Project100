@@ -1,0 +1,81 @@
+page{
+  position: relative;
+}
+.resou{
+  position: relative;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.clearIcon{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.iconbox{
+  font-size: 25rpx;
+  color: darkgray;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.find{
+  display: flex;
+  flex-direction: row;
+}
+.choose{
+  margin-right: 10rpx;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+}
+.selected{
+  font-size: 45rpx;
+  font-weight: bold;
+  color: orange;
+}
+.addar{
+  position: absolute;
+  top: 420rpx;
+  left: 650rpx;
+}
+.listBox{
+  display:flex; 
+  flex-direction:row;
+  margin-bottom:20rpx; 
+  flex-wrap: wrap;
+  padding: 0px 30rpx;
+  justify-content: space-between;
+}
+.imgBox{
+  position: relative;
+  width: 49%;
+  height: 500rpx;
+
+  border: 0px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.imgBox .bg{
+  width: 100%;
+  height: 100%;
+}
+.imgBox .info{
+  width: 100%;
+  padding: 10px 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0rpx;
+  height: 130rpx;
+  background-color: rgba(58, 58, 59, 0.377);
+}
+.info>view{
+ 
+  color: white;
+  font-size: 30rpx;
+}
+.record{
+  margin-right: 5px;
+  
+}

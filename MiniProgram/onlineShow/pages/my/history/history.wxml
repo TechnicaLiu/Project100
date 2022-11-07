@@ -1,0 +1,20 @@
+<!--pages/my/history/history.wxml-->
+<view class="listBox" wx:if="{{historyList.length > 0}}">
+  <view class="item" wx:for="{{historyList}}" wx:key="id">
+      <view class="img">
+        <image  src="{{item.image}}"></image>
+      </view>
+      <view class='info'>
+          <h3>{{item.title}}</h3>
+          <p>{{item.time}}</p>
+      </view>
+  </view>
+</view>
+<view wx:else class="noneList">
+  <van-empty description="暂无记录" />
+</view>
+<view class="clear"> 
+  <van-icon name="clear" size="25px" bindtap="clearHistory"  />
+</view>
+
+<van-dialog id="van-dialog" />

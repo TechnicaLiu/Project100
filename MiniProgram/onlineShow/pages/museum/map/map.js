@@ -1,0 +1,108 @@
+// pages/museum/map/map.js
+var QQMapWX = require('../../../utils/qqmap-wx-jssdk');
+var qqmapsdk;
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data:{
+    markers:[{
+      id:0,
+      longitude:'',
+      latitude:''
+
+    }],
+    longitude:'',
+    latitude:''
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    let location = options.location;
+    qqmapsdk = new QQMapWX({
+      key: 'NKZBZ-PYMC6-JBMSJ-EWGQJ-5M2ZH-EBBYX'
+  });
+    this.getMap(location)
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
+  },
+  getMap(location){
+    let that = this;
+    qqmapsdk.search({
+      keyword: location,
+      success: function (res) {
+          if(res.data.length >=1){
+            let result = res.data[0];
+
+            that.setData({
+              markers:[{
+                longitude:result.location.lng,
+                latitude:result.location.lat,
+              }],
+              longitude:result.location.lng,
+              latitude:result.location.lat
+            })
+            
+          }
+
+
+      },
+      fail: function (res) {
+          console.log(res);
+      },
+  complete: function (res) {
+      console.log(res);
+  }
+});
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

@@ -1,0 +1,88 @@
+.main {
+    margin-top: 10px;
+    width: 980px;
+    height: 465px;
+    margin-left: 220px;
+}
+
+.main .focus {
+    overflow: hidden;
+    float: left;
+    width: 721px;
+    height: 100%;
+}
+
+.main .newsflash {
+    float: right;
+    width: 251px;
+    height: 100%;
+}
+
+.newsflash .news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news .new-hd {
+    padding: 0 15px;
+    line-height: 33px;
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.news .new-hd h5 {
+    float: left;
+}
+
+.news .new-hd .more {
+    float: right;
+}
+
+.news .new-hd .more::after {
+    content: '\e920';
+    font-family: 'icomoon';
+}
+
+.news .news-body {
+    padding: 5px 15px 0;
+}
+
+.news .news-body ul li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.newsflash .lifeservice {
+    overflow: hidden;
+    height: 219px;
+    border: 1px solid #e4e4e4;
+    border-top: 0px;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    padding-top: 12px;
+    width: 63px;
+    height: 73px;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: url(../images/icons.png) no-repeat -17px -12px;
+}
+
+.bargain {
+    margin-top: 6px;
+}

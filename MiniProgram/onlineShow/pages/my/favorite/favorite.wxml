@@ -1,0 +1,46 @@
+<!--pages/my/favorite/favorite.wxml-->
+<van-tabs bind:click="tabChange">
+  <van-tab title="藏品">
+    <view class="articleBox">
+      <view class="item" wx:for="{{articleList}}" wx:key="_id" >
+         <navigator class="article-warp"  url='../../article/article?id={{item._id}}'>
+              <van-card
+              thumb-class="imgClass"
+              title-class='titleClass'
+              desc="{{item.keywords}}"
+              title="{{item.title}}"
+              thumb="{{ item.pic }}"
+            >
+            <view slot="tags">
+              <van-tag plain type="primary">{{item.keywords}}</van-tag>
+            </view>
+        </van-card>
+         
+         
+         </navigator>
+      </view>
+    </view>
+  
+  </van-tab>
+  <van-tab title="展馆">
+    <view class="museumBox">
+      <view class="item" wx:for="{{museumList}}" wx:key="_id" >
+        <navigator  url='../../museum/museum?id={{item._id}}'>
+          <van-card
+          
+          title-class='titleClass'
+          desc="{{item.shortInfo}}"
+          title="{{item.name}}"
+          thumb="{{ item.img }}"
+        >
+        <view slot="tags">
+          <van-tag plain type="primary">{{item.price}}元/人</van-tag>
+        </view>
+        </van-card>
+        
+        
+        </navigator>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

@@ -1,0 +1,79 @@
+/* pages/subcate/subcate.wxss */
+page {
+  padding-bottom: 10rpx;
+}
+ .main-title {
+  padding: 25rpx 40rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  display: block;
+}
+
+.subContent{
+  
+  margin: 0 40rpx;
+}
+.clearfix{overflow:hidden;_zoom:1;}
+
+
+.block{
+  margin-bottom: 20rpx;
+}
+ .article-item {
+  overflow: hidden;
+  float: left;
+  margin-bottom: 20rpx;
+}
+
+
+.article-item .article-clover {
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}
+
+.article-item .article-info {
+  float: left;
+  padding-left: 20rpx;
+  width: 500rpx;
+ 
+  padding-bottom: 10rpx;
+}
+
+.article-item .article-title {
+  font-size: 32rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-item .article-description {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.article-view {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.article-view image {
+  display: inline-block;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+}
+
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}

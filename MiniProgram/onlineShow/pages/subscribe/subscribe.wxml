@@ -1,0 +1,47 @@
+<!--pages/subscribe/subscribe.wxml-->
+<view class="header">
+  <image src="{{museumInfo.img}}" alt=""/>
+  <text class="openDate">开放时间：{{museumInfo.openDate}}</text>
+</view>
+<view class="form">
+  <van-cell-group>
+    <van-field
+    model:value="{{ username }}"
+    required
+    clearable
+    label="姓名"
+    icon="user-o"
+    placeholder="请输入您的姓名"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+  model:value="{{ phone }}"
+    required
+    clearable
+    label="手机号"
+    icon="phone-o"
+    placeholder="请输入您的手机号"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+  model:value="{{ sms }}"
+    center
+    required
+    clearable
+    label="验证码"
+    placeholder="短信验证码"
+    border="{{ false }}"
+    use-button-slot
+  >
+  <van-button slot="button" size="small" plain type="primary" bind:click='sendSms'>
+      发送验证码
+    </van-button>
+  </van-field>  
+<van-toast id="van-toast" />
+</van-cell-group>
+<van-cell label='选择的日期须大于展馆开放时间' title="选择预约日期" model:value="{{ date }}" bind:click="onDisplay" />
+<van-calendar icon="location-o"  color="#424242" show="{{ show }}" min-date="{{ minDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+</view>
+<view class="submitBtn">
+  <text bindtap="submitOrder">提交预约</text>
+</view>

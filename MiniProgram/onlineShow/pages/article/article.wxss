@@ -1,0 +1,131 @@
+
+  swiper {
+    height: 700rpx;
+    width: 100%;
+  }
+  .slide-image {
+    height: 100%;
+    width: 100%;
+  }
+  .slide-image{
+     height: 100%;
+    width: 100%;
+  }
+
+  .author-date {
+    display: flex;
+    align-items: center;
+    margin-left: 30rpx;
+    margin-top: 20rpx;
+      font-size: 24rpx;
+    color: #999;
+  }
+  
+  .avatar {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+  }
+  
+  .author {
+    font-size: 30rpx;
+    font-weight: 300;
+    margin-left: 20rpx;
+    color: #666;
+  }
+  
+  .static, .date {
+    margin-left: 20rpx;
+  }
+  
+  .title {
+    margin-left: 40rpx;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-top: 30rpx;
+    letter-spacing: 2px;
+    color: #4b556c;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40rpx;
+    position: relative;
+  }
+  
+  .icon-wrapper::after {
+    position: absolute;
+    content: '';
+    width: 660rpx;
+    height: 2rpx;
+    background-color: #e5e5e5;
+    top: 46rpx;
+    margin: 0 auto;
+    z-index: -99;
+  }
+  
+  .icon {
+    width: 90rpx;
+    height: 90rpx;
+  }
+  
+  .icon:first-child {
+    margin-right: 30rpx;
+  }
+  
+  .detail {
+    margin-top: 5px;
+    display: block;
+    color: #666;
+    margin: 20rpx 30rpx;
+    line-height: 44rpx;
+    letter-spacing: 2px;
+    font-size: 30rpx;
+    text-indent: 15px;
+    
+  }
+  .tags{
+    display: block;
+    color: rgb(77, 75, 75);
+    margin: 20rpx 30rpx;
+    line-height: 44rpx;
+    letter-spacing: 2px;
+    font-size: 30rpx;
+  }
+  .tags text{
+    display: block;
+    color: rgb(77, 75, 75);
+  }
+.museum{
+    
+    padding: 30rpx;
+    width: 100%;
+}
+.moreinfo{
+  margin-left: 30rpx;
+}
+.museumName{
+    position: relative;
+    font-size: 15px;
+    color: rgb(51, 50, 50);
+    margin-bottom: 15rpx;
+}
+.museumName::after{
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color:#dd4252 ;
+  z-index: -1;
+}
+
+.museumBox{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    border-radius: 10px;
+}

@@ -1,0 +1,26 @@
+<van-search  value="{{ value }}"  
+  bind:search="onSearch"
+  shape="round"
+   input-align="center" placeholder="请输入展品名称" />
+<view class="resou">　记录 |　
+  <image style="width:30rpx; height:30rpx;" src="/assets/images/hot.png" />
+  <span  wx:for="{{record}}" wx:key="index">
+        <span class="record" data-item="{{item}}" bindtap="searchRecord">{{item}}</span>
+        
+  </span>
+  <van-icon class="clearIcon" name="delete-o" bind:click='clearRecord' />
+</view>
+<view class="listBox" wx:if="{{ArticleList.length > 0}}">
+
+  <view class="imgBox" wx:for="{{ArticleList}}" wx:for-item='article' wx:key="index" bindtap="toDetail" data-id='{{article._id}}' >
+      <image class="bg" src="{{article.pic}}"  ></image>
+      <view class="info">
+        <view>{{article.title}}</view>
+        <view>关键字：{{article.keywords}}</view>
+      </view>
+  </view>
+</view>
+<view wx:else>
+  <van-empty description="未搜索到相关记录" />
+</view>
+<van-divider contentPosition="center">没有更多内容</van-divider>

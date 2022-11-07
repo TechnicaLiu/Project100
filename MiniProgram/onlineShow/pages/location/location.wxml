@@ -1,0 +1,31 @@
+<view>
+  <van-search
+  value="{{ value }}"
+  placeholder="请输入展馆名称"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+  <van-dropdown-menu active-color="#242424">
+  <van-dropdown-item value="{{ isrecommand }}" options="{{ recommandTab }}"  bind:change="recommandChange" />
+  <van-dropdown-item value="{{ hasprice }}" options="{{ priceTab }}" bind:change="priceChange" />
+</van-dropdown-menu>
+
+<view class="content">
+  <view class="museumList"> 
+      <view class="item" wx:for="{{museumList}}" wx:key="id" >
+        <navigator class="view-all" url='/pages/museum/museum?id={{item._id}}'>
+          <image src="{{item.img}}"></image>
+         <view class="info" data-id="{{item._id}}" bindtap="toMuseumDetail">
+            <h3>{{item.name}}</h3>
+            <view class="price"> <text>开放时间: {{item.openDate}}</text> <text>{{item.price}}元/人</text></view>
+          
+         </view>
+        </navigator> 
+         </view>
+  </view>
+</view>
+
+
+</view>
+
